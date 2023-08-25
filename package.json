@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "compile-scss": "node-sass src/styles/main.scss dist/main.css",
+    "watch-scss": "watch 'node-sass src/styles/main.scss dist/main.css --watch'"
+  }
+}

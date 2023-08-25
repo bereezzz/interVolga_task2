@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/main.css">
+</head>
+<body>
+  <button class="open-modal-btn">Open Modal</button>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <span class="close-modal-btn">&times;</span>
+      <h2 class="modal__header">Транспортные средства и водители</h2>
+      <form class="modal-form">
+        <label for="licensePlate" class="modal__label">Гос-номер</label>
+        <input type="text" id="licensePlate" name="licensePlate" placeholder="Укажите гос-номер" pattern="[A-Za-zА-Яа-я]{1} [0-9]{3} [A-Za-zА-Яа-я]{2}">
+        
+        <label for="vehicle">Транспортное средство</label>
+        <input type="text" id="vehicle" name="vehicle" placeholder="Транспортное средство">
+        
+        <label for="arrivalDate">Ориентировочная дата прибытия к покупателю</label>
+        <input type="date" id="arrivalDate" name="arrivalDate"  placeholder="Дата">
+        <h3 class="modal__header"> Данные о водителе</h3>
+        <label for="fullName">ФИО</label>
+        <input type="text" id="fullName" name="fullName"  placeholder="Укажите ФИО водителя">
+        
+        <label for="passport">Паспортные данные</label>
+        <div class="passport">
+            <input type="text" id="passport_s" name="passport_s" placeholder="Серия"  pattern="[0-9]{4}">
+            <input type="text" id="passport_n" name="passport_n" placeholder="Номер" pattern="[0-9]{6}">
+        </div>
+        
+        
+        <label for="issuedBy">Кем выдан</label>
+        <input type="text" id="issuedBy" name="issuedBy" placeholder="Кем выдан">
+        
+        <label for="issueDate">Когда выдан</label>
+        <input type="date" id="issueDate" name="issueDate" placeholder="Когда выдан">
+        <div class="error-message" id="error-message">Пожалуйста, заполните все поля!</div>
+        <div class="modal-buttons">
+            <button class="submit-btn">Отправить</button>
+          <button class="cancel-btn">Отмена</button>
+         
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
